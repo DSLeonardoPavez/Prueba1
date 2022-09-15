@@ -116,16 +116,24 @@ public class Registro {
     }
 
     public void setCotrasena(String cotrasena) {
+        int x=0;
+        int y=1;
         int a=1234567890;
         String b="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         for (int i = 0; cotrasena.length()>= i; i++) {
             if(cotrasena.charAt(i)==a){
-            this.email = email;
+                x++;
             }
+            /*
+            if(cotrasena.charAt(i)==b){
+                y++;
+            } 
+            */
         }
-        
-        
-        this.cotrasena = cotrasena;
+        if (x>=1 && y>=1) {
+            this.cotrasena = cotrasena;
+        }
+  
     }
 
     public int getRut() {
@@ -162,10 +170,10 @@ public class Registro {
     {
         StringBuilder sb = new StringBuilder();
         sb.append(telefono);
-        /*char a,b;
+        char a,b;
         a =sb.charAt(0);
-        b =sb.charAt(1);*/
-        if(sb.length() > 7)/* && (a=='5') && (b=='6') */ {
+        b =sb.charAt(1);
+        if(sb.length() > 7 && (a=='5') && (b=='6'))   {
             this.telefono = telefono;
         }
     }
