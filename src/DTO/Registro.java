@@ -11,6 +11,7 @@ public class Registro {
     private char DV;
     private String Fechanacimiento;
     private int telefono;
+    private int edad;
     
     public Registro(){
     this.id = 0;
@@ -22,9 +23,10 @@ public class Registro {
     this.DV = 1;
     this.Fechanacimiento = "";
     this.telefono = 1;
+    this.edad = 1;
     } 
   
-    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, String Fechanacimiento, int telefono) {
+    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, String Fechanacimiento, int telefono, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -34,7 +36,12 @@ public class Registro {
         this.DV = DV;
         this.Fechanacimiento = Fechanacimiento;
         this.telefono = telefono;
+        this.edad = edad;
     }
+
+   
+
+ 
 
     public int getId() {
         return id;
@@ -119,7 +126,15 @@ public class Registro {
         }
     }
     
-    
+     public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        if(edad>17){
+        this.edad = edad;
+        }
+    }
     
     
 
