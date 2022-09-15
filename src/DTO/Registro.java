@@ -1,6 +1,6 @@
-
 package DTO;
 
+import java.util.Date;
 public class Registro {
     private int id;
     private String nombre;
@@ -9,7 +9,7 @@ public class Registro {
     private String cotrasena;
     private int rut;
     private char DV;
-    private String Fechanacimiento;
+    private Date Fechanacimiento;
     private int telefono;
     private int edad;
     
@@ -20,13 +20,13 @@ public class Registro {
     this.usuario = "";
     this.cotrasena = "";
     this.rut = 0;
-    this.DV = 1;
-    this.Fechanacimiento = "";
-    this.telefono = 1;
-    this.edad = 1;
+    this.DV = 0;
+    this.Fechanacimiento = new Date();
+    this.telefono = 0;
+    this.edad = 0;
     } 
   
-    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, String Fechanacimiento, int telefono, int edad) {
+    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, Date Fechanacimiento, int telefono, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -39,9 +39,20 @@ public class Registro {
         this.edad = edad;
     }
 
-   
 
- 
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(usuario);
+        
+        if(sb.length() > 3){
+            this.usuario = usuario;
+        }
+    }
 
     public int getId() {
         return id;
@@ -65,19 +76,6 @@ public class Registro {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(usuario);
-        
-        if(sb.length() > 3){
-            this.usuario = usuario;
-        }
     }
 
     public String getCotrasena() {
@@ -104,13 +102,15 @@ public class Registro {
         this.DV = DV;
     }
 
-    public String getFechanacimiento() {
+    public Date getFechanacimiento() {
         return Fechanacimiento;
     }
 
-    public void setFechanacimiento(String Fechanacimiento) {
+    public void setFechanacimiento(Date Fechanacimiento) {
         this.Fechanacimiento = Fechanacimiento;
     }
+
+  
 
     public int getTelefono() {
         return telefono;
@@ -120,8 +120,10 @@ public class Registro {
     {
         StringBuilder sb = new StringBuilder();
         sb.append(telefono);
-        
-        if(sb.length() > 7) /*&& sb.charAt(0)=5 %% sb.charAt(1)=6 */ {
+        char a,b;
+        a =sb.charAt(0);
+        b =sb.charAt(1);
+        if(sb.length() > 7)/* && (a=='5') && (b=='6') */ {
             this.telefono = telefono;
         }
     }
