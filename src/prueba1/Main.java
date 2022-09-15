@@ -23,14 +23,14 @@ public class Main {
         
         System.out.println("Ingreso de Equipos");
         Equipos eq = new Equipos();
-        private String codigo;
-        private String nombreclub;
-        private String nombrefun;
-        private String lema;
-        private int valors;
-        private String color;
-        private String fundacion;
-        private String pais;
+        eq.setCodigo("SHA1002");
+        eq.setNombreclub("Los Manquitos");
+        eq.setNombrefun("donwe");
+        eq.setLema("Morimos como hombres o vivimos como cobardes");
+        eq.setValors(1200);
+        eq.setColor("Magenta");
+        eq.setFundacion("weboneitor");
+        eq.setPais("Isla Tiki Tiki");
 
     }
     
