@@ -11,6 +11,7 @@ public class Equipos {
     private String color;
     private String fundacion;
     private String pais;
+    private String Descripcion;
     
     public Equipos(){
         this.codigo = "";
@@ -21,8 +22,10 @@ public class Equipos {
         this.color = "";
         this.fundacion = "";
         this.pais = "";
+        this.Descripcion = "";
     }
 
+  
     public Equipos(String codigo, String nombreclub, String nombrefun, String lema, int valors, String color, String fundacion, String pais) {
         this.codigo = codigo;
         this.nombreclub = nombreclub;
@@ -32,6 +35,14 @@ public class Equipos {
         this.color = color;
         this.fundacion = fundacion;
         this.pais = pais;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
 
     public String getCodigo() {
@@ -98,4 +109,12 @@ public class Equipos {
         this.pais = pais;
     }
     
+    @Override
+    public String toString(){
+        
+        return this.Descripcion + this.codigo +
+                " " + this.nombreclub + " " + this.lema
+                + " " + this.valors 
+                +" "+ this.color;
+    }
 }

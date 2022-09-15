@@ -33,7 +33,7 @@ public class Main {
         eq.setFundacion("weboneitor");
         eq.setPais("Isla Tiki Tiki");
         
-        
+        System.out.println("Registro Equipos: "+re.getDescripcion());
         
     }
     

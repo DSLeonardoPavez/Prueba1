@@ -155,6 +155,7 @@ public class Registro {
         }
     }
     
+    @Override
     public String toString(){
         return this.Descripcion + this.id +
                 " " + this.nombre + " " + this.email
