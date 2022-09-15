@@ -12,8 +12,6 @@ public class Equipos {
     private String fundacion;
     private String pais;
     
-
-    
     public Equipos(){
         this.codigo = "";
         this.nombreclub = "";
@@ -99,9 +97,5 @@ public class Equipos {
     public void setPais(String pais) {
         this.pais = pais;
     }
-
-    
-    
-    
     
 }

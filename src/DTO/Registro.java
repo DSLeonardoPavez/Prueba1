@@ -104,8 +104,14 @@ public class Registro {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public void setTelefono(int telefono)
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append(telefono);
+        
+        if(sb.length() > 7) /*&& sb.charAt(0)=5 %% sb.charAt(1)=6 */ {
+            this.telefono = telefono;
+        }
     }
     
     
