@@ -20,6 +20,7 @@ public class Main {
         re.setTelefono(569419194);
         re.setEdad(19);
         
+        System.out.println("Registro Usuario: "+ re.getDescripcion());
         
         System.out.println("Ingreso de Equipos");
         Equipos eq = new Equipos();
@@ -31,7 +32,9 @@ public class Main {
         eq.setColor("Magenta");
         eq.setFundacion("weboneitor");
         eq.setPais("Isla Tiki Tiki");
-
+        
+        
+        
     }
     
 }

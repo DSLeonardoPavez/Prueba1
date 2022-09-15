@@ -12,10 +12,11 @@ public class Registro {
     private Date Fechanacimiento;
     private int telefono;
     private int edad;
+    private String Descripcion;
     
     public Registro(){
     this.id = 0;
-    this.nombre = "";
+    this.nombre = "manito Gonzales";
     this.email = "";
     this.usuario = "";
     this.cotrasena = "";
@@ -24,9 +25,11 @@ public class Registro {
     this.Fechanacimiento = new Date();
     this.telefono = 0;
     this.edad = 0;
+    this.Descripcion = "";
     } 
   
-    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, Date Fechanacimiento, int telefono, int edad) {
+  
+    public Registro(int id, String nombre, String email, String usuario, String cotrasena, int rut, char DV, Date Fechanacimiento, int telefono, int edad, String Descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -37,6 +40,15 @@ public class Registro {
         this.Fechanacimiento = Fechanacimiento;
         this.telefono = telefono;
         this.edad = edad;
+        this.Descripcion = Descripcion;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
 
 
@@ -75,7 +87,12 @@ public class Registro {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        for (int i = 0; email.length()== i; i++) {
+            if(email.charAt(i)=='@'){
+            this.email = email;
+            }
+        }
+        
     }
 
     public String getCotrasena() {
@@ -120,9 +137,9 @@ public class Registro {
     {
         StringBuilder sb = new StringBuilder();
         sb.append(telefono);
-        char a,b;
+        /*char a,b;
         a =sb.charAt(0);
-        b =sb.charAt(1);
+        b =sb.charAt(1);*/
         if(sb.length() > 7)/* && (a=='5') && (b=='6') */ {
             this.telefono = telefono;
         }
@@ -138,7 +155,13 @@ public class Registro {
         }
     }
     
+    public String toString(){
+        return this.Descripcion + this.id +
+                " " + this.nombre + " " + this.email
+                + " " + this.cotrasena;
+    }
     
-
+    
+    
     
 }
