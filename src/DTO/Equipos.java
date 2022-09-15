@@ -4,25 +4,36 @@ package DTO;
 public class Equipos {
     
     private String codigo;
-    private String nombre;
+    private String nombreclub;
+    private String nombrefun;
     private String lema;
     private int valors;
     private String color;
+    private String fundacion;
+    private String pais;
+    
+
     
     public Equipos(){
         this.codigo = "";
-        this.nombre = "";
+        this.nombreclub = "";
+        this.nombrefun = "";
         this.lema = "";
         this.valors = 0;
         this.color = "";
+        this.fundacion = "";
+        this.pais = "";
     }
 
-    public Equipos(String codigo, String nombre, String lema, int valors, String color) {
+    public Equipos(String codigo, String nombreclub, String nombrefun, String lema, int valors, String color, String fundacion, String pais) {
         this.codigo = codigo;
-        this.nombre = nombre;
+        this.nombreclub = nombreclub;
+        this.nombrefun = nombrefun;
         this.lema = lema;
         this.valors = valors;
         this.color = color;
+        this.fundacion = fundacion;
+        this.pais = pais;
     }
 
     public String getCodigo() {
@@ -33,12 +44,20 @@ public class Equipos {
         this.codigo = codigo;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreclub() {
+        return nombreclub;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreclub(String nombreclub) {
+        this.nombreclub = nombreclub;
+    }
+
+    public String getNombrefun() {
+        return nombrefun;
+    }
+
+    public void setNombrefun(String nombrefun) {
+        this.nombrefun = nombrefun;
     }
 
     public String getLema() {
@@ -64,6 +83,23 @@ public class Equipos {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public String getFundacion() {
+        return fundacion;
+    }
+
+    public void setFundacion(String fundacion) {
+        this.fundacion = fundacion;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
     
     
     
