@@ -71,6 +71,7 @@ public class Registro {
     }
 
     public void setId(int id) {
+        
         this.id = id;
     }
 
@@ -87,7 +88,7 @@ public class Registro {
     }
 
     public void setEmail(String email) {
-        for (int i = 0; email.length()== i; i++) {
+        for (int i = 0; email.length()>= i; i++) {
             if(email.charAt(i)=='@'){
             this.email = email;
             }
@@ -100,6 +101,15 @@ public class Registro {
     }
 
     public void setCotrasena(String cotrasena) {
+        int a=1234567890;
+        String b="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        for (int i = 0; cotrasena.length()>= i; i++) {
+            if(cotrasena.charAt(i)==a){
+            this.email = email;
+            }
+        }
+        
+        
         this.cotrasena = cotrasena;
     }
 
