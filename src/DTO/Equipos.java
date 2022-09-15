@@ -1,7 +1,7 @@
 
 package DTO;
 
-public class ClubesDeportivos {
+public class Equipos {
     
     private String codigo;
     private String nombre;
@@ -9,7 +9,7 @@ public class ClubesDeportivos {
     private int valors;
     private String color;
     
-    public ClubesDeportivos(){
+    public Equipos(){
         this.codigo = "";
         this.nombre = "";
         this.lema = "";
@@ -17,7 +17,7 @@ public class ClubesDeportivos {
         this.color = "";
     }
 
-    public ClubesDeportivos(String codigo, String nombre, String lema, int valors, String color) {
+    public Equipos(String codigo, String nombre, String lema, int valors, String color) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.lema = lema;
