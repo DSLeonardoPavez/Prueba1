@@ -65,7 +65,12 @@ public class Registro {
     }
 
     public void setUsuario(String usuario) {
-        this.usuario = usuario;
+        StringBuilder sb = new StringBuilder();
+        sb.append(usuario);
+        
+        if(sb.length() > 3){
+            this.usuario = usuario;
+        }
     }
 
     public String getCotrasena() {
